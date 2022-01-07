@@ -54,6 +54,7 @@ class Route
     /**
      * @param string $path
      * @return false|mixed
+     * @throws ReflectionException
      */
     public function call(string $path){
         $pattern = str_replace("/","\/", $this->getPath());
