@@ -56,7 +56,8 @@ class Route
      * @return false|mixed
      * @throws ReflectionException
      */
-    public function call(string $path){
+    public function call(string $path): mixed
+    {
         $pattern = str_replace("/","\/", $this->getPath());
         $pattern = sprintf("/^%s$/",$pattern);
         $pattern = preg_replace("/(\{\w+\})/", "(.+)", $pattern);
